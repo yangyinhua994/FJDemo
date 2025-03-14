@@ -1,0 +1,46 @@
+{
+    "sourceSystemCode": "xitongbiaoshi",
+    "eventNum": "20230523001",
+    "endStatus": "1",
+    "taskOrderOutPuts": [
+        {
+            "taskCode": "000111222333",
+            "taskName": "核实非法垂钓事项",
+            "taskOrderId": "e85abe0e1f334043bd1888aa74f76e92",
+            "taskOrderDealStatus": "1",
+            "taskOrderEndStatus": "1",
+            "taskOrderOutputArray": [
+                {
+                    "fieldCode": "executeContent",
+                    "fieldName": "处置意见",
+                    "fieldValue": [
+                        "已协调相关部门核实上述人员是否违法"
+                    ],
+                    "isAddToExtends": false
+                }
+            ],
+            "logList": [
+                {
+                    "eventProcessId": "4182142e325d45e6bff1e9b06302fb6d",
+                    "executorId": "6512",
+                    "executor": "张三",
+                    "executorPhone": "13442255555",
+                    "executeDeptId": "GO_ba382a0c86a24f4780e",
+                    "executeDept": "北碚区公安局",
+                    "executeTime": "2023-09-08 10:00:02",
+                    "executeNode": "核实非法垂钓事项",
+                    "executeContent": "已到现场核实，确实存在上述情况",
+                    "isLastTaskOrderLog": true,
+                    "listFile": [
+                        {
+                            "url": "http://xxx.jpg",
+                            "fileType": "01",
+                            "attachmentType": "0",
+                            "fileName": "xxx.jpg"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

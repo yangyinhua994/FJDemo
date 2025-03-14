@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: FJDemo
+
+app:
+  #自闭环参数
+  closed-loop-app-code: A50023600071467202501009033
+  closed-loop-app-secret: lYVljvFWquiy6XmM2gvCLbv5pFgegnP9Sne5pm/Q0ssfJAfVsP+M2w==
+  closed-loop-events-report-url: https://23.210.52.92:30032/api/push/selfEventReport/push
+  closed-loop-disposal_info_report_url: https://23.210.52.92:30032/api/push/selfTaskOrderResult/push
+
+  #车间参数
+  workshop-app-code: A50023600040664202412008847
+  workshop-app-secret: zq0PLAEsqOhtKoisY+kVqCcYh1lY5Ztu4Qzqq0kpleUfJAfVsP+M2w==
+  workshop-app-token: 0a51811816e840799dc29b528272e75f
+
+  #  儿童参数
+  children-app-code: A50023600042595202501009014
+  children-app-secret: lYVljvFWquiy6XmM2gvCLbv5pFgegnP9Sne5pm/Q0ssfJAfVsP+M2w==
+
+ok:
+  http:
+    connect-timeout: 5
+    read-timeout: 5
+    write-timeout: 5
+    max-idle-connections: 200
+    keep-alive-duration: 300
+

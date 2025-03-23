@@ -3,8 +3,12 @@ spring:
     name: FJDemo
 
 app:
-  events-report-url: https://23.210.52.92:30032/api/push/selfEventReport/push
-  disposal_info_report_url: https://23.210.52.92:30032/api/push/selfTaskOrderResult/push
+  #  事件上报
+  events-report-url: https://23.210.52.92:30032/api/push/eventReport/v1
+  #  自闭环事件上报
+  close_loop_events-report-url: https://23.210.52.92:30032/api/push/selfEventReport/push
+  #  自闭环事件处置信息上报
+  close_loop_disposal_info_report_url: https://23.210.52.92:30032/api/push/selfTaskOrderResult/push
 
   #车间参数
   workshop-app-code: A50023600040664202412008847

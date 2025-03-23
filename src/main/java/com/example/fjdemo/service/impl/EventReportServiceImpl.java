@@ -24,7 +24,8 @@ public class EventReportServiceImpl implements EventReportService {
     private String childrenAppCode;
     private String childrenAppSecret;
     private String eventsReportUrl;
-    private String disposalInfoReportUrl;
+    private String closeLoopEventsReportUrl;
+    private String closeLoopDisposalInfoReportUrl;
 
     private String workshopAppCode;
     private String workshopAppSecret;
@@ -36,8 +37,13 @@ public class EventReportServiceImpl implements EventReportService {
     }
 
     @Override
-    public Result<?> childrenDisposalInfoReport(ClosedLoopEventDTO closedLoopEventDTO) {
-        return HttpUtil.post(disposalInfoReportUrl, getClosedLoopReportHeader(childrenAppCode, childrenAppSecret), JSONObject.toJSONString(closedLoopEventDTO));
+    public Result<?> childrenClosedLoopEventReport(ClosedLoopEventDTO closedLoopEventDTO) {
+        return HttpUtil.post(closeLoopEventsReportUrl, getClosedLoopReportHeader(childrenAppCode, childrenAppSecret), JSONObject.toJSONString(closedLoopEventDTO));
+    }
+
+    @Override
+    public Result<?> childrenClosedLoopDisposalInfoReport(ClosedLoopEventDTO closedLoopEventDTO) {
+        return HttpUtil.post(closeLoopDisposalInfoReportUrl, getClosedLoopReportHeader(childrenAppCode, childrenAppSecret), JSONObject.toJSONString(closedLoopEventDTO));
     }
 
     @Override

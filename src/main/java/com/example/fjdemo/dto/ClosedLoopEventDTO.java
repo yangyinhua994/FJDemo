@@ -22,13 +22,13 @@ public class ClosedLoopEventDTO implements Serializable {
     /**
      * 应用识别码
      */
-    @NotBlank(message = "sourceSystemCode cannot be null", groups = {ClosedLoopEvent.class, ClosedLoopDisposalInformation.class})
+    @NotBlank(message = "sourceSystemCode cannot be null", groups = {ClosedLoopEvent.class, ClosedLoopDisposalInformation.class, Event.class})
     private String sourceSystemCode;
 
     /**
      * 事件单ID
      */
-    @NotBlank(message = "eventNum cannot be null", groups = {ClosedLoopEvent.class, ClosedLoopDisposalInformation.class})
+    @NotBlank(message = "eventNum cannot be null", groups = {ClosedLoopEvent.class, ClosedLoopDisposalInformation.class, Event.class})
     private String eventNum;
     /**
      * 事件结案状态
@@ -50,25 +50,25 @@ public class ClosedLoopEventDTO implements Serializable {
     /**
      * 事件单标题
      */
-    @NotBlank(message = "eventTitle cannot be null", groups = ClosedLoopEvent.class)
+    @NotBlank(message = "eventTitle cannot be null", groups = {ClosedLoopEvent.class, Event.class})
     private String eventTitle;
 
     /**
      * 事件单类型
      */
-    @NotBlank(message = "eventType cannot be null", groups = ClosedLoopEvent.class)
+    @NotBlank(message = "eventType cannot be null", groups = {ClosedLoopEvent.class, Event.class})
     private String eventType;
 
     /**
      * 事发内容
      */
-    @NotBlank(message = "eventContent cannot be null", groups = ClosedLoopEvent.class)
+    @NotBlank(message = "eventContent cannot be null", groups = {ClosedLoopEvent.class, Event.class})
     private String eventContent;
 
     /**
      * 事发时间
      */
-    @NotNull(message = "happenTime cannot be null", groups = ClosedLoopEvent.class)
+    @NotNull(message = "happenTime cannot be null", groups = {ClosedLoopEvent.class, Event.class})
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private Date happenTime;
 
@@ -87,7 +87,7 @@ public class ClosedLoopEventDTO implements Serializable {
     /**
      * 所属区县编码
      */
-    @NotBlank(message = "belongCounty cannot be null", groups = ClosedLoopEvent.class)
+    @NotBlank(message = "belongCounty cannot be null", groups = {ClosedLoopEvent.class, Event.class})
     private String belongCounty;
 
     /**

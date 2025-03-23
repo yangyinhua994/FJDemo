@@ -8,7 +8,11 @@ public interface EventReportService {
 
     Result<?> childrenEventsReport(ClosedLoopEventDTO closedLoopEventDTO);
 
-    Result<?> childrenDisposalInfoReport(ClosedLoopEventDTO closedLoopEventDTO);
+    Result<?> childrenClosedLoopEventReport(ClosedLoopEventDTO closedLoopEventDTO);
+
+    Result<?> childrenClosedLoopDisposalInfoReport(ClosedLoopEventDTO closedLoopEventDTO);
 
     Result<String> flowChildrenUpdate(DcqcEventStatusDto dcqcEventStatusDto);
+
+
 }

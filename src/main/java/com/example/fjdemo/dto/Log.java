@@ -1,4 +1,4 @@
-package com.example.fjdemo.controller.dto;
+package com.example.fjdemo.dto;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

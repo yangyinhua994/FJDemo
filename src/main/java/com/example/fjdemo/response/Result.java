@@ -1,16 +1,13 @@
 package com.example.fjdemo.response;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
  * @author yyh
  */
-@Getter
-@Setter
+@Data
 public class Result<T> {
 
     private Integer code = SUCCESS_CODE;

@@ -1,4 +1,4 @@
-package com.example.fjdemo.controller.dto;
+package com.example.fjdemo.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.validation.constraints.NotBlank;

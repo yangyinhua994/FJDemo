@@ -10,11 +10,14 @@ import okhttp3.*;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
+import javax.net.ssl.SSLContext;
+import javax.net.ssl.SSLSocketFactory;
+import javax.net.ssl.TrustManager;
+import javax.net.ssl.X509TrustManager;
 import java.io.IOException;
 import java.security.cert.X509Certificate;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
-import javax.net.ssl.*;
 
 /**
  * @author YangYinHua
@@ -61,7 +64,9 @@ public class HttpUtil {
         // 发送请求并获取响应
         try (Response response = okHttpClient.newCall(request).execute()) {
             if (response.isSuccessful() && response.body() != null) {
-                return JSON.parseObject(response.body().string(), Result.class);
+                String string = response.body().string();
+                log.info("请求成功,code： {}，url： {}", string, url);
+                return JSON.parseObject(string, Result.class);
             } else {
                 log.error("请求失败,code： {}，url： {}", response.code(), url);
             }

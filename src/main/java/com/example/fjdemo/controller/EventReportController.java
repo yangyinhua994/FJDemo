@@ -321,7 +321,6 @@ public class EventReportController {
                   "eventNum": "SHGKPW202503181631518755559"
                 }""";
         test(jsonStr);
-
     }
 
     private void test(String jsonStr) {
